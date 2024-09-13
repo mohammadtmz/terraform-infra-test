@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "./modules/vpc"
+  source = "terraformtest/modules/vpc"
   version = "1.9.5"
 
   # Define the vpc cidr block
