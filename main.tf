@@ -1,13 +1,4 @@
-# define the aws provider
+# define aws provider
 provider "aws" {
-  region = "us-east-1"
-}
-
-resource "aws_instance" "example" {
-  ami = var.ami
-  instance_type = var.instance_type
-
-  tags = {
-    Name = "TerraformExample"
-  }
+    region = "us-east-1"
 }
