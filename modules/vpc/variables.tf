@@ -17,3 +17,9 @@ variable "az" {
     description = " the availability zone to create the subnet in"
     type = string
 }
+
+variable "vpc_name" {
+    description = "the name of the vpc"
+    type = string
+    default = MyVPC
+}
