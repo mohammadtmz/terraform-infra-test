@@ -21,5 +21,5 @@ variable "az" {
 variable "vpc_name" {
     description = "the name of the vpc"
     type = string
-    default = MyVPC
+    default = "MyVPC"
 }
