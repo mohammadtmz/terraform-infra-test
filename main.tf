@@ -11,5 +11,5 @@ resource "aws_iam_user" "example" {
 resource "aws_iam_user_policy_attachment" "example" {
     for_each    = aws_iam_user.example
     user        = each.key
-    policy_arn  = "arn:aws:iam::aws:policy/${each.value.policy}"
+    policy_arn  = "arn:aws:iam::aws:policy/${var.users[each.key].policy}"
 }
