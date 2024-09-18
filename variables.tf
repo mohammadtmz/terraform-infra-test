@@ -1,18 +1,21 @@
 variable "users" {
+  description = "Map of users to create. Keys are the user names, values are a map containing whether to create the user and the user's policy."
   type = map(object({
     create_user = bool
     policy      = string
-    # other attributes
   }))
-}
-
-users = {
-  "user1" = {
-    create_user = true
-    policy      = "AmazonS3FullAccess"
-  },
-  "user2" = {
-    create_user = true
-    policy      = "AmazonEC2FullAccess"
+  default = {
+    "user1" = {
+      create_user = true
+      policy      = "AdminAccess"
+    },
+    "user2" = {
+      create_user = false
+      policy      = "ReadOnlyAccess"
+    },
+    "user3" = {
+      create_user = true
+      policy      = "PowerUserAccess"
+    }
   }
 }
