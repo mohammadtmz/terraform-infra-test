@@ -47,7 +47,7 @@ resource "aws_autoscaling_policy" "scale_down" {
 resource "aws_cloudwatch_metric_alarm" "cpu_high" {
     alarm_name          = "cpu-high"
     comparison_operator = "GreaterThanOrEqualToThreshold"
-    evaluation_period   = 2
+    evaluation_periods  = 2
     metric_name         = "CPUUtilization"
     namespace           = "AWS/EC2"
     period              = 120
@@ -60,9 +60,9 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high" {
 }
 
 resource "aws_cloudwatch_metric_alarm" "cpu_low" {
-    name                = "cpu-low"
+    alarm_name          = "cpu-low"
     comparison_operator = "LessThanOrEqualToThreshold"
-    evaluation_period   = 2
+    evaluation_periods  = 2
     metric_name         = "CPUUtilization"
     namespace           = "AWS/EC2"
     period              = 120
