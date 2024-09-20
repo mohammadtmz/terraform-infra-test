@@ -20,8 +20,6 @@ resource "aws_s3_bucket" "example" {
         Name = "${local.environment}-bucket-example"
         Environment = local.environment
     }
-
-    object_ownership = "BucketOwnerEnforced"
 }
 
 output "current_workspace" {
