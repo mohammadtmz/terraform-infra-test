@@ -30,6 +30,6 @@ variable "subnet_ids" {
 
 variable "security_group_ids" {
     description = "List of security group IDs for the instances"
-    type        = list[string]
+    type        = list(string)
     default     = ["sg-04fce9899b86162c7"]
 }
