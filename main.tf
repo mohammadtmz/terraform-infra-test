@@ -9,6 +9,9 @@ locals {
 resource "random_string" "bucket_id" {
     length = 9
     special = false
+    upper = false
+    lower = true
+    number = true
 }
 
 resource "aws_s3_bucket" "example" {
