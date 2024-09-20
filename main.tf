@@ -11,7 +11,7 @@ resource "random_string" "bucket_id" {
     special = false
     upper = false
     lower = true
-    number = true
+    numeric = true
 }
 
 resource "aws_s3_bucket" "example" {
