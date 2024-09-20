@@ -23,7 +23,7 @@ resource "aws_autoscaling_group" "example_asg" {
 
     vpc_zone_identifier = var.subnet_ids
 
-    tag {
+    tag = {
         Key                 = "Name"
         value               = "example-asg-instance"
         propagate_at_launch = true
