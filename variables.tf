@@ -24,12 +24,12 @@ variable "max_size" {
 
 variable "subnet_ids" {
     description = "List of subnet IDs for the auto scaling group"
-    type        = List(string)
+    type        = list(string)
     default     = ["subnet-042d70c9e16cd3774", "subnet-0e068f221f702a940"]
 }
 
 variable "security_group_ids" {
     description = "List of security group IDs for the instances"
-    type        = List[string]
+    type        = list[string]
     default     = ["sg-04fce9899b86162c7"]
 }
