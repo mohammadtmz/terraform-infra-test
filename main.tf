@@ -7,7 +7,7 @@ locals {
 }
 
 resource "random_string" "bucket_id" {
-    length = 9
+    length = 8
     special = false
     upper = false
     lower = true
